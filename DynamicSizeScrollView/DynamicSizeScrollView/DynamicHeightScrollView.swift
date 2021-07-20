@@ -7,10 +7,17 @@
 
 import UIKit
 
-class DynamicHeightScrollView: UIScrollView {
+open class DynamicHeightScrollView: UIScrollView {
   
   var contentView: UIView?
   
+  // Default init with no content View
+  init() {
+    self.contentView = nil
+    super.init(frame: .zero)
+  }
+  
+  // Custom init with configuring content View  and padding
   init(contentView: UIView, padding: UIEdgeInsets = .zero) {
     self.contentView = contentView
     super.init(frame: .zero)
@@ -19,12 +26,7 @@ class DynamicHeightScrollView: UIScrollView {
     configureContentView(padding)
   }
   
-  init() {
-    self.contentView = nil
-    super.init(frame: .zero)
-  }
-  
-  required init?(coder: NSCoder) {
+  required public init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
   

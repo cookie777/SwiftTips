@@ -1,0 +1,404 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		48660AF426A6956B005449B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48660AF326A6956B005449B8 /* AppDelegate.swift */; };
+		48660AF626A6956B005449B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48660AF526A6956B005449B8 /* SceneDelegate.swift */; };
+		48660AF826A6956B005449B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48660AF726A6956B005449B8 /* ViewController.swift */; };
+		48660AFD26A6956F005449B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48660AFC26A6956F005449B8 /* Assets.xcassets */; };
+		48660B0026A6956F005449B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48660AFE26A6956F005449B8 /* LaunchScreen.storyboard */; };
+		F6F79B0428DB41AE460D455B /* Pods_ReactiveKeyboardHeight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01D69BEF43980A0D5472260 /* Pods_ReactiveKeyboardHeight.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		48660AF026A6956B005449B8 /* ReactiveKeyboardHeight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveKeyboardHeight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		48660AF326A6956B005449B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		48660AF526A6956B005449B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		48660AF726A6956B005449B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		48660AFC26A6956F005449B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		48660AFF26A6956F005449B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		48660B0126A6956F005449B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59B16A58C4F69B003099820F /* Pods-ReactiveKeyboardHeight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveKeyboardHeight.release.xcconfig"; path = "Target Support Files/Pods-ReactiveKeyboardHeight/Pods-ReactiveKeyboardHeight.release.xcconfig"; sourceTree = "<group>"; };
+		75C45715E9E5959FA9C8FCCA /* Pods-ReactiveKeyboardHeight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveKeyboardHeight.debug.xcconfig"; path = "Target Support Files/Pods-ReactiveKeyboardHeight/Pods-ReactiveKeyboardHeight.debug.xcconfig"; sourceTree = "<group>"; };
+		D01D69BEF43980A0D5472260 /* Pods_ReactiveKeyboardHeight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveKeyboardHeight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48660AED26A6956B005449B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6F79B0428DB41AE460D455B /* Pods_ReactiveKeyboardHeight.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		48660AE726A6956B005449B8 = {
+			isa = PBXGroup;
+			children = (
+				48660AF226A6956B005449B8 /* ReactiveKeyboardHeight */,
+				48660AF126A6956B005449B8 /* Products */,
+				C7022A12CC1FC5C54729213A /* Pods */,
+				4D956CDF41D7977076EE6DF8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		48660AF126A6956B005449B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48660AF026A6956B005449B8 /* ReactiveKeyboardHeight.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48660AF226A6956B005449B8 /* ReactiveKeyboardHeight */ = {
+			isa = PBXGroup;
+			children = (
+				48660AF326A6956B005449B8 /* AppDelegate.swift */,
+				48660AF526A6956B005449B8 /* SceneDelegate.swift */,
+				48660AF726A6956B005449B8 /* ViewController.swift */,
+				48660AFC26A6956F005449B8 /* Assets.xcassets */,
+				48660AFE26A6956F005449B8 /* LaunchScreen.storyboard */,
+				48660B0126A6956F005449B8 /* Info.plist */,
+			);
+			path = ReactiveKeyboardHeight;
+			sourceTree = "<group>";
+		};
+		4D956CDF41D7977076EE6DF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D01D69BEF43980A0D5472260 /* Pods_ReactiveKeyboardHeight.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7022A12CC1FC5C54729213A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75C45715E9E5959FA9C8FCCA /* Pods-ReactiveKeyboardHeight.debug.xcconfig */,
+				59B16A58C4F69B003099820F /* Pods-ReactiveKeyboardHeight.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		48660AEF26A6956B005449B8 /* ReactiveKeyboardHeight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48660B0426A6956F005449B8 /* Build configuration list for PBXNativeTarget "ReactiveKeyboardHeight" */;
+			buildPhases = (
+				D100D8242A4C33E850C1B3E0 /* [CP] Check Pods Manifest.lock */,
+				48660AEC26A6956B005449B8 /* Sources */,
+				48660AED26A6956B005449B8 /* Frameworks */,
+				48660AEE26A6956B005449B8 /* Resources */,
+				DAD9C2C170F1CA743786F85D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReactiveKeyboardHeight;
+			productName = ReactiveKeyboardHeight;
+			productReference = 48660AF026A6956B005449B8 /* ReactiveKeyboardHeight.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48660AE826A6956B005449B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					48660AEF26A6956B005449B8 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = 48660AEB26A6956B005449B8 /* Build configuration list for PBXProject "ReactiveKeyboardHeight" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 48660AE726A6956B005449B8;
+			productRefGroup = 48660AF126A6956B005449B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48660AEF26A6956B005449B8 /* ReactiveKeyboardHeight */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48660AEE26A6956B005449B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48660B0026A6956F005449B8 /* LaunchScreen.storyboard in Resources */,
+				48660AFD26A6956F005449B8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D100D8242A4C33E850C1B3E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReactiveKeyboardHeight-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAD9C2C170F1CA743786F85D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReactiveKeyboardHeight/Pods-ReactiveKeyboardHeight-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReactiveKeyboardHeight/Pods-ReactiveKeyboardHeight-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReactiveKeyboardHeight/Pods-ReactiveKeyboardHeight-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48660AEC26A6956B005449B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48660AF826A6956B005449B8 /* ViewController.swift in Sources */,
+				48660AF426A6956B005449B8 /* AppDelegate.swift in Sources */,
+				48660AF626A6956B005449B8 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		48660AFE26A6956F005449B8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48660AFF26A6956F005449B8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48660B0226A6956F005449B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		48660B0326A6956F005449B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		48660B0526A6956F005449B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75C45715E9E5959FA9C8FCCA /* Pods-ReactiveKeyboardHeight.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2PTMH7A8WP;
+				INFOPLIST_FILE = ReactiveKeyboardHeight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.queens-game.ReactiveKeyboardHeight";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		48660B0626A6956F005449B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59B16A58C4F69B003099820F /* Pods-ReactiveKeyboardHeight.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2PTMH7A8WP;
+				INFOPLIST_FILE = ReactiveKeyboardHeight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.queens-game.ReactiveKeyboardHeight";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48660AEB26A6956B005449B8 /* Build configuration list for PBXProject "ReactiveKeyboardHeight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48660B0226A6956F005449B8 /* Debug */,
+				48660B0326A6956F005449B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48660B0426A6956F005449B8 /* Build configuration list for PBXNativeTarget "ReactiveKeyboardHeight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48660B0526A6956F005449B8 /* Debug */,
+				48660B0626A6956F005449B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 48660AE826A6956B005449B8 /* Project object */;
+}

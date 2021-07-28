@@ -44,7 +44,7 @@ extension ViewController {
     // When enter, dismiss keyboard
     textField.rx
       .controlEvent(.editingDidEndOnExit)
-      .bind {}
+      .bind { }
       .disposed(by: disposeBag)
     
     // Add Gesture: when tap out of keyboard, dismiss it
@@ -82,5 +82,9 @@ extension ViewController {
       }
       .disposed(by: disposeBag)
 
+  }
+  
+  func a()  {
+    self.textField.text = "aaa"
   }
 }

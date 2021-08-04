@@ -6,25 +6,27 @@
 //
 
 import UIKit
+import RxSwift
 
 class ItemListViewModel {
+  let disposedBag = DisposeBag()
   var peoples: [People] = []
   var fetchedImages: [Int: UIImage?] = [:]
   
-  func fetchItems(completion: @escaping ()->Void) {
-    APIRequest.shared.fetchAllItems { peoples in
-      self.peoples = Array(peoples[0...19])
-      DispatchQueue.main.async {
-        completion()
+  func fetchAllItems() -> Observable<Void> {
+    let url = URL(string: "https://rickandmortyapi.com/api/character")!
+    
+    return APIRequest.shared.fetch(from: url)
+      .map { [weak self] (peoples: Peoples) in
+        self?.peoples = peoples.results
       }
-    }
   }
   
-  func fetchImage(url: String, completion: @escaping (UIImage?) -> Void) {
-    APIRequest.shared.fetchImage(url: URL(string: url)!) { image in
-      DispatchQueue.main.async {
-        completion(image)
+  func fetchImage(id: Int, url: String) -> Observable<Void> {
+    let url = URL(string: url)!
+    return APIRequest.shared.fetchImage(from: url)
+      .map { [weak self] image in
+        self?.fetchedImages[id] = image
       }
-    }
   }
 }

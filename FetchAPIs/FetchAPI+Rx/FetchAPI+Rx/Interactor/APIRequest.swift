@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class APIRequest {
   static let shared = APIRequest()
@@ -18,131 +20,46 @@ class APIRequest {
 
 extension APIRequest {
   
-  /// Fetch json type
-  /// - Parameters:
-  ///   - url: end point
-  ///   - completion: handling parsed Json
-  private func fetch<T: Decodable>(from url: URL, completion: @escaping (Result<T, NetworkError>) -> Void) {
-    dataTask?.cancel()
+  func fetch<T: Decodable>(from url: URL) -> Observable<T> {
+    let request = URLRequest(url: url)
     
-    dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
-      // client error
-      guard error == nil else {
-        completion(.failure(.client(message: error!.localizedDescription)))
-        return
-      }
-      
-      // server error
-      guard let res = response as? HTTPURLResponse, (200...299).contains(res.statusCode) else {
-        completion(.failure(.server))
-        return
-      }
-      
-      do {
-        guard let data = data else {
-          // data is nil
-          completion(.failure(.client(message: error!.localizedDescription)))
-          return
+    return URLSession.shared.rx.response(request: request)
+      .map { (response, data) -> T in
+        // server error
+        if !(200...299).contains(response.statusCode) {
+          throw NetworkError.server
         }
-        let decodable = try JSONDecoder().decode(T.self, from: data)
-        completion(.success(decodable))
-      } catch {
+        
         // decode error
-        completion(.failure(.client(message: error.localizedDescription)))
+        do {
+          let decodable = try JSONDecoder().decode(T.self, from: data)
+          return decodable
+        } catch {
+          // decode error
+          throw NetworkError.client(message: "decode error")
+        }
+        
       }
-    }
-    
-    dataTask?.resume()
   }
   
-  /// Fetch image
-  /// - Parameters:
-  ///   - url: end point
-  ///   - completion: handle fetched image
-  private func fetchImage(from url: URL, completion: @escaping (Result<UIImage, NetworkError>) -> Void) {
-    
-    dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
-      // client error
-      guard error == nil else {
-        completion(.failure(.client(message: error!.localizedDescription)))
-        return
-      }
-      
-      // server error
-      guard let res = response as? HTTPURLResponse, (200...299).contains(res.statusCode) else {
-        completion(.failure(.server))
-        return
-      }
-      
-      // data is nil
-      guard let data = data, let image = UIImage(data: data) else {
-        completion(.failure(.client(message: "data error")))
-        return
-      }
-      completion(.success(image))
-    }
-    
-    dataTask?.resume()
-  }
   
+  func fetchImage(from url: URL) -> Observable<UIImage> {
+    let request = URLRequest(url: url)
+    
+    return URLSession.shared.rx.response(request: request)
+      .map { (response, data) -> UIImage in
+        
+        // server error
+        if !(200...299).contains(response.statusCode) {
+          throw NetworkError.server
+        }
+        
+        // decode error
+        guard let image = UIImage(data: data) else {
+          throw NetworkError.client(message: "data error")
+        }
+        return image
+      }
+  }
 }
 
-
-// MARK: - Headings
-
-extension APIRequest {
-  
-  /// Fetch all `People objects`
-  /// - Parameter completion: handle `[People]`
-  func fetchAllItems(completion: @escaping ([People])->Void) {
-    APIRequest.shared.fetch(from: URL(string: "https://rickandmortyapi.com/api/character")!)
-    { (result: Result<Peoples, NetworkError>) in
-      
-      switch result {
-        case .success(let data):
-          completion(data.results)
-        case .failure(let error):
-          debugPrint(error.localizedDescription)
-      }
-      
-    }
-  }
-  
-  /// Fetch a detail of people
-  /// - Parameters:
-  ///   - id: target id
-  ///   - completion: handle fetched detail
-  func fetchItem(id: Int, completion: @escaping (PeopleDetail)->Void) {
-    APIRequest.shared.fetch(from: URL(string: "https://rickandmortyapi.com/api/character/\(id)")!)
-    { (result: Result<PeopleDetail, NetworkError>) in
-      
-      switch result {
-        case .success(let data):
-          completion(data)
-        case .failure(let error):
-          debugPrint(error.localizedDescription)
-      }
-      
-    }
-  }
-  
-  /// Fetch image
-  /// - Parameters:
-  ///   - url: target url
-  ///   - completion: handle fetched iamge
-  func fetchImage(url: URL, completion: @escaping (UIImage?) -> Void) {
-    
-    APIRequest.shared.fetchImage(from: url)
-    {  (result: Result<UIImage, NetworkError>) in
-      
-      switch result {
-        case .success(let image):
-          completion(image)
-          
-        case .failure(let error):
-          debugPrint(error.localizedDescription)
-      }
-      
-    }
-  }
-}

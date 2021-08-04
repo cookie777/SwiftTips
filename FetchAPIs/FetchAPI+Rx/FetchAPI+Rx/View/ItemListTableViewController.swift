@@ -14,10 +14,7 @@ class ItemListTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.register(ItemTableViewCell.self, forCellReuseIdentifier: ItemTableViewCell.identifier)
-    
-    viewModel.fetchItems { [weak self] in
-      self?.tableView.reloadData()
-    }
+    subscribeItems()
   }
   
   // MARK: - Table view data source
@@ -44,10 +41,7 @@ class ItemListTableViewController: UITableViewController {
     if let fetchedImage = viewModel.fetchedImages[people.id] {
       cell.setUpImage(fetchedImage)
     } else {
-      viewModel.fetchImage(url: people.image) { image in
-        self.viewModel.fetchedImages[people.id] = image
-        tableView.reloadRows(at: [indexPath], with: .none)
-      }
+      subscribeImages(id: people.id, imageURL: people.image, indexPath: indexPath)
     }
     
     return cell
@@ -67,4 +61,35 @@ class ItemListTableViewController: UITableViewController {
     navigationController?.pushViewController(nextVC, animated: true)
   }
   
+}
+
+
+// MARK: - subscribe
+
+extension ItemListTableViewController {
+  private func subscribeItems() {
+    viewModel.fetchAllItems()
+     .subscribe { [weak self] _ in
+       DispatchQueue.main.async {
+         self?.tableView.reloadData()
+       }
+     } onError: { error in
+       debugPrint(error.localizedDescription)
+     } onCompleted: {
+       debugPrint("we fetched all items")
+     }.disposed(by: viewModel.disposedBag)
+  }
+  
+  private func subscribeImages(id: Int, imageURL: String, indexPath: IndexPath ) {
+    viewModel.fetchImage(id: id, url: imageURL)
+      .subscribe {[weak self] _ in
+        DispatchQueue.main.async {
+          self?.tableView.reloadRows(at: [indexPath], with: .none)
+        }
+      } onError: { error in
+        debugPrint(error.localizedDescription)
+      } onCompleted: {
+        debugPrint("\(id) is finished fetching image")
+      }.disposed(by: viewModel.disposedBag)
+  }
 }

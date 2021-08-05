@@ -40,15 +40,19 @@ class ItemListTableViewController: UITableViewController {
     // Reset previous image used as reusable cell
     cell.setUpImage(UIImage.placeholder)
     
-    // Fetch image if not feched
-    if let fetchedImage = viewModel.fetchedImages[people.id] {
-      cell.setUpImage(fetchedImage)
-    } else {
-      viewModel.fetchImage(url: people.image) { image in
-        self.viewModel.fetchedImages[people.id] = image
-        tableView.reloadRows(at: [indexPath], with: .none)
+    // Fetch image
+    let url = URL(string: people.image)! as NSURL
+    viewModel.fetchImage(url: url) { image, status in
+      switch status {
+        case .loaded:
+          tableView.reloadRows(at: [indexPath], with: .none)
+        case .loading:
+          break
+        case .hasCache:
+          cell.setUpImage(image)
       }
     }
+    
     
     return cell
   }
@@ -59,7 +63,9 @@ class ItemListTableViewController: UITableViewController {
     let nextVM = ItemDetailViewModel()
     let people = viewModel.peoples[indexPath.row]
     nextVM.people = people
-    if let image = viewModel.fetchedImages[people.id] {
+    
+    let url = URL(string: people.image)!
+    if let image = viewModel.imageCache.object(forKey: url as NSURL) {
       nextVM.fetchedImage = image
     }
     let nextVC = ItemDetailViewController(viewModel: nextVM)

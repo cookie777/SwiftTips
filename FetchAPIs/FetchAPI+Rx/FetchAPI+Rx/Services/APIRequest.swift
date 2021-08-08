@@ -12,8 +12,22 @@ import RxCocoa
 class APIRequest {
   static let shared = APIRequest()
   private init() { }
-  private var dataTask: URLSessionDataTask?
+  
+  let imageCache = NSCache<NSURL, UIImage>()
+  let requestCache = NSCache<NSURL, NSNull>()
+  
+  var customUrlSession: URLSession = {
+    let configuration = URLSessionConfiguration.default
+    configuration.timeoutIntervalForRequest = TimeInterval(10)
+    configuration.timeoutIntervalForResource = TimeInterval(10)
+    return URLSession(configuration: configuration)
+  }()
 }
+
+enum FetchStatus {
+  case loaded, loading, hasCache
+}
+
 
 
 // MARK: - Basic fetch
@@ -46,7 +60,7 @@ extension APIRequest {
   func fetchImage(from url: URL) -> Observable<UIImage> {
     let request = URLRequest(url: url)
     
-    return URLSession.shared.rx.response(request: request)
+    return APIRequest.shared.customUrlSession.rx.response(request: request)
       .map { (response, data) -> UIImage in
         
         // server error

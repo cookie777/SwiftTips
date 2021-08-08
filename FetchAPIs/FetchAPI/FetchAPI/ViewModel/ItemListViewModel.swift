@@ -9,8 +9,6 @@ import UIKit
 
 class ItemListViewModel {
   var peoples: [People] = []
-  let imageCache = NSCache<NSURL, UIImage>()
-  let requestCache = NSCache<NSURL, NSNull>()
   
   func fetchItems(completion: @escaping ()->Void) {
     APIRequest.shared.fetchAllItems { peoples in
@@ -21,30 +19,37 @@ class ItemListViewModel {
     }
   }
   
-  func fetchImage(url: NSURL, completion: @escaping (UIImage?, Status) -> Void) {
+  func fetchImage(url: NSURL, completion: @escaping (UIImage?, FetchStatus) -> Void) {
     
-    if let fetchedImage = imageCache.object(forKey: url) {
+    // If cache exist, try to use it.
+    if let fetchedImage = APIRequest.shared.imageCache.object(forKey: url) {
       completion(fetchedImage, .hasCache)
       return
     }
     
-    if let _ = requestCache.object(forKey: url) {
-      completion(nil, .loading)
+    // If the request already exist, ignore.
+    if let _ = APIRequest.shared.requestCache.object(forKey: url) {
       return
+    } else {
+      APIRequest.shared.requestCache.setObject(ImageRequest(completion), forKey: url)
     }
-
-    requestCache.setObject(NSNull(), forKey: url)
+    
     APIRequest.shared.fetchImage(url: url as URL) { image in
-      guard let image = image else { return }
-      self.imageCache.setObject(image, forKey: url)
-      self.requestCache.removeObject(forKey: url)
-      DispatchQueue.main.async {
-        completion(image, .loaded)
+      // request fail, remove request from the list
+      guard let image = image else {
+        APIRequest.shared.requestCache.removeObject(forKey: url)
+        return
+      }
+      
+      APIRequest.shared.imageCache.setObject(image, forKey: url)
+      
+      if let completion = APIRequest.shared.requestCache.object(forKey: url)?.completion {
+        APIRequest.shared.requestCache.removeObject(forKey: url)
+        DispatchQueue.main.async {
+          completion(image, .loaded)
+        }
       }
     }
   }
-  
-  enum Status {
-    case loaded, loading, hasCache
-  }
+
 }

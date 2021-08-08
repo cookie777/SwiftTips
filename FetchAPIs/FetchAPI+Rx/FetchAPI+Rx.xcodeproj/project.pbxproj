@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,7 @@
 		485724AD26B7C7BD00EEA092 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485724AC26B7C7BD00EEA092 /* ViewController.swift */; };
 		485724B226B7C7BE00EEA092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 485724B126B7C7BE00EEA092 /* Assets.xcassets */; };
 		485724B526B7C7BE00EEA092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 485724B326B7C7BE00EEA092 /* LaunchScreen.storyboard */; };
-		485724BF26B7C81500EEA092 /* ItemListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485724BE26B7C81500EEA092 /* ItemListTableViewController.swift */; };
+		485724BF26B7C81500EEA092 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485724BE26B7C81500EEA092 /* ItemListViewController.swift */; };
 		485724C226B7C88D00EEA092 /* ItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485724C126B7C88D00EEA092 /* ItemListViewModel.swift */; };
 		485724C626B7C8B200EEA092 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485724C426B7C8B200EEA092 /* APIRequest.swift */; };
 		485724E026B7CBC000EEA092 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485724DF26B7CBC000EEA092 /* Error.swift */; };
@@ -32,7 +32,7 @@
 		485724B126B7C7BE00EEA092 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		485724B426B7C7BE00EEA092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		485724B626B7C7BE00EEA092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		485724BE26B7C81500EEA092 /* ItemListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListTableViewController.swift; sourceTree = "<group>"; };
+		485724BE26B7C81500EEA092 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 		485724C126B7C88D00EEA092 /* ItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModel.swift; sourceTree = "<group>"; };
 		485724C426B7C8B200EEA092 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		485724DF26B7CBC000EEA092 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				485724B626B7C7BE00EEA092 /* Info.plist */,
-				485724C326B7C8B200EEA092 /* Interactor */,
+				485724C326B7C8B200EEA092 /* Services */,
 				485724D626B7CB3D00EEA092 /* Model */,
 				485724BC26B7C7F600EEA092 /* View */,
 				485724C026B7C87900EEA092 /* ViewModel */,
@@ -92,7 +92,7 @@
 		485724BC26B7C7F600EEA092 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				485724BE26B7C81500EEA092 /* ItemListTableViewController.swift */,
+				485724BE26B7C81500EEA092 /* ItemListViewController.swift */,
 				485724E826B8B9EF00EEA092 /* ItemDetailViewController.swift */,
 				485724E326B7CD7900EEA092 /* ItemTableViewCell.swift */,
 			);
@@ -121,12 +121,12 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		485724C326B7C8B200EEA092 /* Interactor */ = {
+		485724C326B7C8B200EEA092 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				485724C426B7C8B200EEA092 /* APIRequest.swift */,
 			);
-			path = Interactor;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		485724D626B7CB3D00EEA092 /* Model */ = {
@@ -152,7 +152,6 @@
 				E7700FAB4E0E2BBFB743D073 /* Pods-FetchAPI+rx.debug.xcconfig */,
 				D208012F5BF2AE249A084A96 /* Pods-FetchAPI+rx.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -283,7 +282,7 @@
 				485724EB26B8BA1000EEA092 /* ItemDetialViewModel.swift in Sources */,
 				485724A926B7C7BD00EEA092 /* AppDelegate.swift in Sources */,
 				485724C226B7C88D00EEA092 /* ItemListViewModel.swift in Sources */,
-				485724BF26B7C81500EEA092 /* ItemListTableViewController.swift in Sources */,
+				485724BF26B7C81500EEA092 /* ItemListViewController.swift in Sources */,
 				485724E226B7CBCE00EEA092 /* People.swift in Sources */,
 				485724C626B7C8B200EEA092 /* APIRequest.swift in Sources */,
 				4876A38126B90AD00061EC30 /* UIIImage+placeholder.swift in Sources */,
@@ -435,7 +434,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.FetchAPI+rx";
+				PRODUCT_BUNDLE_IDENTIFIER = com.FetchAPI.rx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -455,7 +454,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.FetchAPI+rx";
+				PRODUCT_BUNDLE_IDENTIFIER = com.FetchAPI.rx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -11,7 +11,28 @@ class APIRequest {
   static let shared = APIRequest()
   private init() { }
   private var dataTask: URLSessionDataTask?
+  
+  let imageCache = NSCache<NSURL, UIImage>()
+  let requestCache = NSCache<NSURL, ImageRequest>()
+  
+  var customUrlSession: URLSession = {
+    let configuration = URLSessionConfiguration.default
+    configuration.timeoutIntervalForRequest = TimeInterval(300)
+    configuration.timeoutIntervalForResource = TimeInterval(300)
+    return URLSession(configuration: configuration)
+  }()
 }
+
+enum FetchStatus {
+  case loaded, loading, hasCache
+}
+class ImageRequest {
+  var completion: (UIImage?, FetchStatus) -> Void
+  init(_ completion: @escaping (UIImage?, FetchStatus) -> Void){
+    self.completion = completion
+  }
+}
+
 
 
 // MARK: - Basic fetch
@@ -59,9 +80,9 @@ extension APIRequest {
   /// - Parameters:
   ///   - url: end point
   ///   - completion: handle fetched image
-  private func fetchImage(from url: URL, completion: @escaping (Result<UIImage, NetworkError>) -> Void) {
+  private func fetchImage(from url: URL, completion: @escaping (Result<UIImage?, NetworkError>) -> Void) {
     
-    dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
+    customUrlSession.dataTask(with: url) { (data, response, error) in
       // client error
       guard error == nil else {
         completion(.failure(.client(message: error!.localizedDescription)))
@@ -80,9 +101,8 @@ extension APIRequest {
         return
       }
       completion(.success(image))
-    }
+    }.resume()
     
-    dataTask?.resume()
   }
   
 }
@@ -133,13 +153,14 @@ extension APIRequest {
   func fetchImage(url: URL, completion: @escaping (UIImage?) -> Void) {
     
     APIRequest.shared.fetchImage(from: url)
-    {  (result: Result<UIImage, NetworkError>) in
+    {  (result: Result<UIImage?, NetworkError>) in
       
       switch result {
         case .success(let image):
           completion(image)
           
         case .failure(let error):
+          completion(nil)
           debugPrint(error.localizedDescription)
       }
       

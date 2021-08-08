@@ -103,11 +103,21 @@ extension ItemDetailViewController {
   }
   
   private func subscribeImage() {
-    APIRequest.shared.fetchImage(from: URL(string: viewModel.people.image)!)
+    if let image = viewModel.fetchedImage {
+      updateImage(image: image)
+      return 
+    }
+    
+    let url = URL(string: viewModel.people.image)!
+    APIRequest.shared.fetchImage(from: url)
       .subscribe { [weak self] image in
         self?.updateImage(image: image)
+        self?.viewModel.fetchedImage = image
+        APIRequest.shared.imageCache.setObject(image, forKey: url as NSURL)
+        APIRequest.shared.requestCache.removeObject(forKey: url as NSURL)
       } onError: { error in
         debugPrint(error.localizedDescription)
+        APIRequest.shared.requestCache.removeObject(forKey: url as NSURL)
       } onCompleted: {
         debugPrint("detail has fetched")
       }.disposed(by: viewModel.disposedBag)

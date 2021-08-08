@@ -30,6 +30,11 @@ class ItemListTableViewController: UITableViewController {
     return viewModel.peoples.count
   }
   
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    32
+  }
+  
+  
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
     guard let cell = tableView.dequeueReusableCell(withIdentifier: ItemTableViewCell.identifier, for: indexPath) as? ItemTableViewCell else { return UITableViewCell()}
@@ -37,7 +42,7 @@ class ItemListTableViewController: UITableViewController {
     let people = viewModel.peoples[indexPath.row]
     cell.setUpLayout(people)
     
-    // Reset previous image used as reusable cell
+    // Reset previous image for reusable cell
     cell.setUpImage(UIImage.placeholder)
     
     // Fetch image
@@ -45,6 +50,7 @@ class ItemListTableViewController: UITableViewController {
     viewModel.fetchImage(url: url) { image, status in
       switch status {
         case .loaded:
+          // This will call `cellForRowAt` again.
           tableView.reloadRows(at: [indexPath], with: .none)
         case .loading:
           break
@@ -65,12 +71,21 @@ class ItemListTableViewController: UITableViewController {
     nextVM.people = people
     
     let url = URL(string: people.image)!
-    if let image = viewModel.imageCache.object(forKey: url as NSURL) {
+    if let image = APIRequest.shared.imageCache.object(forKey: url as NSURL) {
       nextVM.fetchedImage = image
+    }
+    APIRequest.shared.customUrlSession.getAllTasks { allTasks in
+      allTasks.forEach { task in
+        task.cancel()
+      }
     }
     let nextVC = ItemDetailViewController(viewModel: nextVM)
     
     navigationController?.pushViewController(nextVC, animated: true)
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    tableView.reloadData()
   }
   
 }

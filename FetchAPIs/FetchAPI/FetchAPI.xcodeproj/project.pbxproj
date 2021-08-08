@@ -82,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				485724B626B7C7BE00EEA092 /* Info.plist */,
-				485724C326B7C8B200EEA092 /* Interactor */,
+				485724C326B7C8B200EEA092 /* services */,
 				485724D626B7CB3D00EEA092 /* Model */,
 				485724BC26B7C7F600EEA092 /* View */,
 				485724C026B7C87900EEA092 /* ViewModel */,
@@ -122,12 +122,12 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		485724C326B7C8B200EEA092 /* Interactor */ = {
+		485724C326B7C8B200EEA092 /* services */ = {
 			isa = PBXGroup;
 			children = (
 				485724C426B7C8B200EEA092 /* APIRequest.swift */,
 			);
-			path = Interactor;
+			path = services;
 			sourceTree = "<group>";
 		};
 		485724D626B7CB3D00EEA092 /* Model */ = {

@@ -61,7 +61,7 @@ extension APIRequest {
   ///   - completion: handle fetched image
   private func fetchImage(from url: URL, completion: @escaping (Result<UIImage, NetworkError>) -> Void) {
     
-    dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
+    URLSession.shared.dataTask(with: url) { (data, response, error) in
       // client error
       guard error == nil else {
         completion(.failure(.client(message: error!.localizedDescription)))
@@ -80,9 +80,7 @@ extension APIRequest {
         return
       }
       completion(.success(image))
-    }
-    
-    dataTask?.resume()
+    }.resume()
   }
   
 }

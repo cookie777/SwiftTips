@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     guard let scene = (scene as? UIWindowScene) else { return }
     self.window = UIWindow(windowScene: scene)
     
-    let root = ItemListCollectionViewController(collectionViewLayout: UICollectionViewLayout())
+    let root = ItemListViewController()
     let nv = UINavigationController(rootViewController: root)
     self.window?.rootViewController = nv
     self.window?.makeKeyAndVisible()

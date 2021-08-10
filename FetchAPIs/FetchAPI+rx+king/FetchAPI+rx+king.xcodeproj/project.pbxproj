@@ -3,45 +3,47 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		485724A926B7C7BD00EEA092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485724A826B7C7BD00EEA092 /* AppDelegate.swift */; };
 		485724AB26B7C7BD00EEA092 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485724AA26B7C7BD00EEA092 /* SceneDelegate.swift */; };
+		485724AD26B7C7BD00EEA092 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485724AC26B7C7BD00EEA092 /* ViewController.swift */; };
 		485724B226B7C7BE00EEA092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 485724B126B7C7BE00EEA092 /* Assets.xcassets */; };
 		485724B526B7C7BE00EEA092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 485724B326B7C7BE00EEA092 /* LaunchScreen.storyboard */; };
+		485724BF26B7C81500EEA092 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485724BE26B7C81500EEA092 /* ItemListViewController.swift */; };
 		485724C226B7C88D00EEA092 /* ItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485724C126B7C88D00EEA092 /* ItemListViewModel.swift */; };
 		485724C626B7C8B200EEA092 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485724C426B7C8B200EEA092 /* APIRequest.swift */; };
 		485724E026B7CBC000EEA092 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485724DF26B7CBC000EEA092 /* Error.swift */; };
 		485724E226B7CBCE00EEA092 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485724E126B7CBCE00EEA092 /* People.swift */; };
+		485724E426B7CD7900EEA092 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485724E326B7CD7900EEA092 /* ItemTableViewCell.swift */; };
 		485724E926B8B9EF00EEA092 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485724E826B8B9EF00EEA092 /* ItemDetailViewController.swift */; };
 		485724EB26B8BA1000EEA092 /* ItemDetialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485724EA26B8BA1000EEA092 /* ItemDetialViewModel.swift */; };
-		4876A37426B8FCC10061EC30 /* SectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876A37326B8FCC10061EC30 /* SectionItem.swift */; };
-		4876A37726B8FDA80061EC30 /* ItemListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876A37626B8FDA80061EC30 /* ItemListCollectionViewController.swift */; };
-		4876A37B26B908170061EC30 /* UIImage+placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876A37A26B908170061EC30 /* UIImage+placeholder.swift */; };
-		C2E5CF0EEB4E6221B0BD8FBF /* Pods_FetchAPI_diffable_rx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65624BEC15755401A1950F5B /* Pods_FetchAPI_diffable_rx.framework */; };
+		4876A38126B90AD00061EC30 /* UIIImage+placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876A38026B90AD00061EC30 /* UIIImage+placeholder.swift */; };
+		EC0DB3E153A1B89714BA9336 /* Pods_FetchAPI_rx_king.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4F4D2A16EDDF91D2F9EAD8 /* Pods_FetchAPI_rx_king.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1401E15486C6E51D3F86435F /* Pods-FetchAPI+diffable+rx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FetchAPI+diffable+rx.release.xcconfig"; path = "Target Support Files/Pods-FetchAPI+diffable+rx/Pods-FetchAPI+diffable+rx.release.xcconfig"; sourceTree = "<group>"; };
-		485724A526B7C7BD00EEA092 /* FetchAPI+diffable+rx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FetchAPI+diffable+rx.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		394BE32432E5B5B31559409C /* Pods-FetchAPI+rx+king.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FetchAPI+rx+king.debug.xcconfig"; path = "Target Support Files/Pods-FetchAPI+rx+king/Pods-FetchAPI+rx+king.debug.xcconfig"; sourceTree = "<group>"; };
+		485724A526B7C7BD00EEA092 /* FetchAPI+rx+king.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FetchAPI+rx+king.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		485724A826B7C7BD00EEA092 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		485724AA26B7C7BD00EEA092 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		485724AC26B7C7BD00EEA092 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		485724B126B7C7BE00EEA092 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		485724B426B7C7BE00EEA092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		485724B626B7C7BE00EEA092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		485724BE26B7C81500EEA092 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 		485724C126B7C88D00EEA092 /* ItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModel.swift; sourceTree = "<group>"; };
 		485724C426B7C8B200EEA092 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		485724DF26B7CBC000EEA092 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		485724E126B7CBCE00EEA092 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		485724E326B7CD7900EEA092 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		485724E826B8B9EF00EEA092 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		485724EA26B8BA1000EEA092 /* ItemDetialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetialViewModel.swift; sourceTree = "<group>"; };
-		4876A37326B8FCC10061EC30 /* SectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionItem.swift; sourceTree = "<group>"; };
-		4876A37626B8FDA80061EC30 /* ItemListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListCollectionViewController.swift; sourceTree = "<group>"; };
-		4876A37A26B908170061EC30 /* UIImage+placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+placeholder.swift"; sourceTree = "<group>"; };
-		65624BEC15755401A1950F5B /* Pods_FetchAPI_diffable_rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FetchAPI_diffable_rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		95E1B2369BDCAE4233EF897F /* Pods-FetchAPI+diffable+rx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FetchAPI+diffable+rx.debug.xcconfig"; path = "Target Support Files/Pods-FetchAPI+diffable+rx/Pods-FetchAPI+diffable+rx.debug.xcconfig"; sourceTree = "<group>"; };
+		4876A38026B90AD00061EC30 /* UIIImage+placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIIImage+placeholder.swift"; sourceTree = "<group>"; };
+		5A4F4D2A16EDDF91D2F9EAD8 /* Pods_FetchAPI_rx_king.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FetchAPI_rx_king.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F91315B91A797066694D08F1 /* Pods-FetchAPI+rx+king.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FetchAPI+rx+king.release.xcconfig"; path = "Target Support Files/Pods-FetchAPI+rx+king/Pods-FetchAPI+rx+king.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,58 +51,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2E5CF0EEB4E6221B0BD8FBF /* Pods_FetchAPI_diffable_rx.framework in Frameworks */,
+				EC0DB3E153A1B89714BA9336 /* Pods_FetchAPI_rx_king.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04BD57FCBD2460451DA414E7 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				95E1B2369BDCAE4233EF897F /* Pods-FetchAPI+diffable+rx.debug.xcconfig */,
-				1401E15486C6E51D3F86435F /* Pods-FetchAPI+diffable+rx.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		4857249C26B7C7BD00EEA092 = {
 			isa = PBXGroup;
 			children = (
-				485724A726B7C7BD00EEA092 /* FetchAPI+diffable+rx */,
+				485724A726B7C7BD00EEA092 /* FetchAPI+rx+king */,
 				485724A626B7C7BD00EEA092 /* Products */,
-				04BD57FCBD2460451DA414E7 /* Pods */,
-				88B9D82048416C035BC3080E /* Frameworks */,
+				869435D51AE4E9F98ECAF97E /* Pods */,
+				C6FC7BBF41EE29E6DB5CAEFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		485724A626B7C7BD00EEA092 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				485724A526B7C7BD00EEA092 /* FetchAPI+diffable+rx.app */,
+				485724A526B7C7BD00EEA092 /* FetchAPI+rx+king.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		485724A726B7C7BD00EEA092 /* FetchAPI+diffable+rx */ = {
+		485724A726B7C7BD00EEA092 /* FetchAPI+rx+king */ = {
 			isa = PBXGroup;
 			children = (
 				485724B626B7C7BE00EEA092 /* Info.plist */,
-				485724C326B7C8B200EEA092 /* Interactor */,
+				485724C326B7C8B200EEA092 /* Services */,
 				485724D626B7CB3D00EEA092 /* Model */,
 				485724BC26B7C7F600EEA092 /* View */,
 				485724C026B7C87900EEA092 /* ViewModel */,
 				485724BD26B7C7FD00EEA092 /* Support */,
 			);
-			path = "FetchAPI+diffable+rx";
+			path = "FetchAPI+rx+king";
 			sourceTree = "<group>";
 		};
 		485724BC26B7C7F600EEA092 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4876A37526B8FD730061EC30 /* ViewController */,
+				485DE8AE26C1DF0D00B14D67 /* ViewController */,
+				485724E326B7CD7900EEA092 /* ItemTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -108,9 +101,10 @@
 		485724BD26B7C7FD00EEA092 /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				4876A37826B907E90061EC30 /* extension */,
+				4876A37F26B90AB60061EC30 /* extension */,
 				485724A826B7C7BD00EEA092 /* AppDelegate.swift */,
 				485724AA26B7C7BD00EEA092 /* SceneDelegate.swift */,
+				485724AC26B7C7BD00EEA092 /* ViewController.swift */,
 				485724B126B7C7BE00EEA092 /* Assets.xcassets */,
 				485724B326B7C7BE00EEA092 /* LaunchScreen.storyboard */,
 			);
@@ -126,12 +120,12 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		485724C326B7C8B200EEA092 /* Interactor */ = {
+		485724C326B7C8B200EEA092 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				485724C426B7C8B200EEA092 /* APIRequest.swift */,
 			);
-			path = Interactor;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		485724D626B7CB3D00EEA092 /* Model */ = {
@@ -139,32 +133,40 @@
 			children = (
 				485724DF26B7CBC000EEA092 /* Error.swift */,
 				485724E126B7CBCE00EEA092 /* People.swift */,
-				4876A37326B8FCC10061EC30 /* SectionItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		4876A37526B8FD730061EC30 /* ViewController */ = {
+		485DE8AE26C1DF0D00B14D67 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				485724BE26B7C81500EEA092 /* ItemListViewController.swift */,
 				485724E826B8B9EF00EEA092 /* ItemDetailViewController.swift */,
-				4876A37626B8FDA80061EC30 /* ItemListCollectionViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		4876A37826B907E90061EC30 /* extension */ = {
+		4876A37F26B90AB60061EC30 /* extension */ = {
 			isa = PBXGroup;
 			children = (
-				4876A37A26B908170061EC30 /* UIImage+placeholder.swift */,
+				4876A38026B90AD00061EC30 /* UIIImage+placeholder.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
 		};
-		88B9D82048416C035BC3080E /* Frameworks */ = {
+		869435D51AE4E9F98ECAF97E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				65624BEC15755401A1950F5B /* Pods_FetchAPI_diffable_rx.framework */,
+				394BE32432E5B5B31559409C /* Pods-FetchAPI+rx+king.debug.xcconfig */,
+				F91315B91A797066694D08F1 /* Pods-FetchAPI+rx+king.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C6FC7BBF41EE29E6DB5CAEFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A4F4D2A16EDDF91D2F9EAD8 /* Pods_FetchAPI_rx_king.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -172,23 +174,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		485724A426B7C7BD00EEA092 /* FetchAPI+diffable+rx */ = {
+		485724A426B7C7BD00EEA092 /* FetchAPI+rx+king */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 485724B926B7C7BE00EEA092 /* Build configuration list for PBXNativeTarget "FetchAPI+diffable+rx" */;
+			buildConfigurationList = 485724B926B7C7BE00EEA092 /* Build configuration list for PBXNativeTarget "FetchAPI+rx+king" */;
 			buildPhases = (
-				5AE797EFFB0E74A225EDAB68 /* [CP] Check Pods Manifest.lock */,
+				FA66D85027C354E40FE17CFB /* [CP] Check Pods Manifest.lock */,
 				485724A126B7C7BD00EEA092 /* Sources */,
 				485724A226B7C7BD00EEA092 /* Frameworks */,
 				485724A326B7C7BD00EEA092 /* Resources */,
-				075E9EE04F878079F690A17D /* [CP] Embed Pods Frameworks */,
+				FEE25A933CDED1BD720E187F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "FetchAPI+diffable+rx";
+			name = "FetchAPI+rx+king";
 			productName = APIFetchDefault;
-			productReference = 485724A526B7C7BD00EEA092 /* FetchAPI+diffable+rx.app */;
+			productReference = 485724A526B7C7BD00EEA092 /* FetchAPI+rx+king.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -205,7 +207,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 485724A026B7C7BD00EEA092 /* Build configuration list for PBXProject "FetchAPI+diffable+rx" */;
+			buildConfigurationList = 485724A026B7C7BD00EEA092 /* Build configuration list for PBXProject "FetchAPI+rx+king" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -218,7 +220,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				485724A426B7C7BD00EEA092 /* FetchAPI+diffable+rx */,
+				485724A426B7C7BD00EEA092 /* FetchAPI+rx+king */,
 			);
 		};
 /* End PBXProject section */
@@ -236,24 +238,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		075E9EE04F878079F690A17D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FetchAPI+diffable+rx/Pods-FetchAPI+diffable+rx-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FetchAPI+diffable+rx/Pods-FetchAPI+diffable+rx-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FetchAPI+diffable+rx/Pods-FetchAPI+diffable+rx-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5AE797EFFB0E74A225EDAB68 /* [CP] Check Pods Manifest.lock */ = {
+		FA66D85027C354E40FE17CFB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -268,11 +253,28 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FetchAPI+diffable+rx-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FetchAPI+rx+king-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEE25A933CDED1BD720E187F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FetchAPI+rx+king/Pods-FetchAPI+rx+king-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FetchAPI+rx+king/Pods-FetchAPI+rx+king-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FetchAPI+rx+king/Pods-FetchAPI+rx+king-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -282,15 +284,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4876A37B26B908170061EC30 /* UIImage+placeholder.swift in Sources */,
-				4876A37426B8FCC10061EC30 /* SectionItem.swift in Sources */,
 				485724E926B8B9EF00EEA092 /* ItemDetailViewController.swift in Sources */,
-				4876A37726B8FDA80061EC30 /* ItemListCollectionViewController.swift in Sources */,
+				485724AD26B7C7BD00EEA092 /* ViewController.swift in Sources */,
+				485724E426B7CD7900EEA092 /* ItemTableViewCell.swift in Sources */,
 				485724EB26B8BA1000EEA092 /* ItemDetialViewModel.swift in Sources */,
 				485724A926B7C7BD00EEA092 /* AppDelegate.swift in Sources */,
 				485724C226B7C88D00EEA092 /* ItemListViewModel.swift in Sources */,
+				485724BF26B7C81500EEA092 /* ItemListViewController.swift in Sources */,
 				485724E226B7CBCE00EEA092 /* People.swift in Sources */,
 				485724C626B7C8B200EEA092 /* APIRequest.swift in Sources */,
+				4876A38126B90AD00061EC30 /* UIIImage+placeholder.swift in Sources */,
 				485724E026B7CBC000EEA092 /* Error.swift in Sources */,
 				485724AB26B7C7BD00EEA092 /* SceneDelegate.swift in Sources */,
 			);
@@ -428,18 +431,18 @@
 		};
 		485724BA26B7C7BE00EEA092 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95E1B2369BDCAE4233EF897F /* Pods-FetchAPI+diffable+rx.debug.xcconfig */;
+			baseConfigurationReference = 394BE32432E5B5B31559409C /* Pods-FetchAPI+rx+king.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PTMH7A8WP;
-				INFOPLIST_FILE = "FetchAPI+diffable+rx/Info.plist";
+				INFOPLIST_FILE = "FetchAPI+rx+king/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.FetchAPI-diffable-rx";
+				PRODUCT_BUNDLE_IDENTIFIER = com.FetchAPI.rx.king;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -448,18 +451,18 @@
 		};
 		485724BB26B7C7BE00EEA092 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1401E15486C6E51D3F86435F /* Pods-FetchAPI+diffable+rx.release.xcconfig */;
+			baseConfigurationReference = F91315B91A797066694D08F1 /* Pods-FetchAPI+rx+king.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PTMH7A8WP;
-				INFOPLIST_FILE = "FetchAPI+diffable+rx/Info.plist";
+				INFOPLIST_FILE = "FetchAPI+rx+king/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.FetchAPI-diffable-rx";
+				PRODUCT_BUNDLE_IDENTIFIER = com.FetchAPI.rx.king;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -469,7 +472,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		485724A026B7C7BD00EEA092 /* Build configuration list for PBXProject "FetchAPI+diffable+rx" */ = {
+		485724A026B7C7BD00EEA092 /* Build configuration list for PBXProject "FetchAPI+rx+king" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				485724B726B7C7BE00EEA092 /* Debug */,
@@ -478,7 +481,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		485724B926B7C7BE00EEA092 /* Build configuration list for PBXNativeTarget "FetchAPI+diffable+rx" */ = {
+		485724B926B7C7BE00EEA092 /* Build configuration list for PBXNativeTarget "FetchAPI+rx+king" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				485724BA26B7C7BE00EEA092 /* Debug */,

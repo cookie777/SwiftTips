@@ -25,12 +25,3 @@ struct PeopleDetail: Codable {
   var species: String
 }
 
-extension People: Hashable {
-  func hash(into hasher: inout Hasher) {
-    hasher.combine(id)
-    hasher.combine(name)
-  }
-  static func == (lhs: People, rhs: People) -> Bool {
-    return lhs.hashValue == rhs.hashValue
-  }
-}

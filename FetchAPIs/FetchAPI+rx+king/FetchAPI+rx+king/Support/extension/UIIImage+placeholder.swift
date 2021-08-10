@@ -1,6 +1,6 @@
 //
 //  UIImage+placeholder.swift
-//  FetchAPI+diffable
+//  FetchAPI
 //
 //  Created by Takayuki Yamaguchi on 2021-08-02.
 //

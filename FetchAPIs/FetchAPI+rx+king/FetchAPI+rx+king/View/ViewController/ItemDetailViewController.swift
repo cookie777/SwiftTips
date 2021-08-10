@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ItemDetailViewController: UIViewController {
   var viewModel: ItemDetailViewModel!
@@ -45,19 +46,18 @@ class ItemDetailViewController: UIViewController {
     super.viewDidLoad()
     setUpLayout()
     setUpUI()
-    
-    // Fetch and update UI
-    viewModel.fetchItem { [weak self] detail in
-      self?.updateDetail(detail: detail)
-    }
-    
-    viewModel.fetchImage { [weak self] image in
-      self?.updateImage(image: image)
-    }
-    
-  }
   
-  func setUpLayout() {
+    subscribeDetail()
+    setUpImage()
+  }
+}
+
+
+
+// MARK: - Layout & UI
+
+extension ItemDetailViewController {
+  private func setUpLayout() {
     view.backgroundColor = .systemBackground
     view.addSubview(stackView)
     NSLayoutConstraint.activate([
@@ -66,19 +66,52 @@ class ItemDetailViewController: UIViewController {
     ])
   }
   
-  func setUpUI() {
+  private func setUpUI() {
     idLabel.text = viewModel.people.id.description
     nameLabel.text = viewModel.people.name
   }
   
-  func updateDetail(detail: PeopleDetail) {
-    statusLabel.text = detail.status
-    speciesLabel.text = detail.species
+  private func updateDetail(detail: PeopleDetail) {
+    DispatchQueue.main.async {
+      self.statusLabel.text = detail.status
+      self.speciesLabel.text = detail.species
+    }
+    
   }
   
-  func updateImage(image: UIImage?) {
-    profileImage.image = image
+  private func setUpImage() {
+    profileImage.kf.setImage(
+      with: URL(string: viewModel.people.image),
+      placeholder: UIImage.placeholder,
+        options: [
+            .loadDiskFileSynchronously,
+            .cacheOriginalImage,
+            .transition(.fade(0.25)),
+        ],
+        progressBlock: { receivedSize, totalSize in
+            // Progress updated
+        },
+        completionHandler: { result in
+            // Done
+        }
+    )
   }
-  
-  
+
+}
+
+
+// MARK: - Subscribe
+
+extension ItemDetailViewController {
+  private func subscribeDetail() {
+    // Fetch and update UI
+    viewModel.fetchItem()
+      .subscribe { [weak self] detail in
+        self?.updateDetail(detail: detail)
+      } onError: { error in
+        debugPrint(error.localizedDescription)
+      } onCompleted: {
+        debugPrint("detail has fetched")
+      }.disposed(by: viewModel.disposedBag)
+  }
 }

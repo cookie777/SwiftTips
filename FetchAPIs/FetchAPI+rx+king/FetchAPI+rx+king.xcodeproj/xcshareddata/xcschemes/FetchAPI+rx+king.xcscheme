@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "485724A426B7C7BD00EEA092"
-               BuildableName = "FetchAPI+diffable+rx.app"
-               BlueprintName = "FetchAPI+diffable+rx"
-               ReferencedContainer = "container:FetchAPI+diffable+rx.xcodeproj">
+               BuildableName = "FetchAPI+rx+king.app"
+               BlueprintName = "FetchAPI+rx+king"
+               ReferencedContainer = "container:FetchAPI+rx+king.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "485724A426B7C7BD00EEA092"
-            BuildableName = "FetchAPI+diffable+rx.app"
-            BlueprintName = "FetchAPI+diffable+rx"
-            ReferencedContainer = "container:FetchAPI+diffable+rx.xcodeproj">
+            BuildableName = "FetchAPI+rx+king.app"
+            BlueprintName = "FetchAPI+rx+king"
+            ReferencedContainer = "container:FetchAPI+rx+king.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "485724A426B7C7BD00EEA092"
-            BuildableName = "FetchAPI+diffable+rx.app"
-            BlueprintName = "FetchAPI+diffable+rx"
-            ReferencedContainer = "container:FetchAPI+diffable+rx.xcodeproj">
+            BuildableName = "FetchAPI+rx+king.app"
+            BlueprintName = "FetchAPI+rx+king"
+            ReferencedContainer = "container:FetchAPI+rx+king.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
